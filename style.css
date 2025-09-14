@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #F0F8FF;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    transition: background 0.3s ease;
+    padding: 1em;
+    z-index: 1000;
+
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4rem;
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease
+}
+
+nav.scrolled {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    color: azure;
+}
+
+li {
+    transition: size 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f73ed, #7dc9e0);
+    /* background: linear-gradient(135deg, #7c4dff, #e040fb); purple → magenta */
+}
+
+#hero .text {
+    font-family: "Nata Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    border-right: 3.5px solid #F0F8FF;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(40, end) forwards, blink .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    to {
+        width: 50%
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+#about {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+#about img {
+    margin-top: 1.5rem;
+    width: 30rem;
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.1);
+}
+
+.clear {
+    padding: 1.5rem;
+}
+
+.about-text p {
+    font-size: large;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.about-text p:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.about-text p:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.about-text p:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#skills i{
+    color: white;
+
+
+}
